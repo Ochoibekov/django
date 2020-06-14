@@ -1,0 +1,11 @@
+<body>
+<h1>Homework</h1>
+    {% for i in homework_show %}
+        <div>
+            <p>ТемаH: {{ i.course_title }}</p>
+            <p>ЗаданиеH: {{ i.content }}</p>
+            <p>Course_ID: {{ i.course_id }}</p>
+            <p>--------------------------------------------</p>
+        </div>
+    {% endfor %}
+</body>

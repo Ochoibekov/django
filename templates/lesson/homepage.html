@@ -1,0 +1,13 @@
+<body>
+<h1>Список заданий</h1>
+<a href ="{% url 'homeworks' %}">homeworks</a>
+    {% for i in lessons %}
+        <div>
+            <p>Тема: {{ i.course_title }}</p>
+            <p>Задание: {{ i.content }}</p>
+            <p>course_id: {{ i.id }}</p>
+            <p>--------------------------------------------</p>
+            <a href ="{% url 'homework_show_page' course_id=i.id %}">View</a>
+        </div>
+    {% endfor %}
+</body>
