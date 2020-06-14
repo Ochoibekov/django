@@ -1,8 +1,12 @@
 <body>
+{% if request.user.is_authenticated %}
 <h1>Новое домашнее задание</h1>
 <form method="POST" class="post-form">
 {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="save btn btn-default">Сохранить</button>
 </form>
+    {% else %}
+    <h1>sorry guys</h1>
+{% endif %}
 </body>
