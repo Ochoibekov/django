@@ -30,6 +30,6 @@ def homeworks(request):
 
 def homework_show_page(request, course_id):
     Course_id = format(course_id)
-    homework_show = Homework.objects.all().filter(course_id=Course_id)
-    print(homework_show.count())
-    return render(request, 'lesson/homework_show_page.html', {'homework_show_page': homework_show})
+    homework_show_page = Homework.objects.all().filter(course_id=Course_id)
+    # print(homework_show.count())
+    return render(request, 'lesson/homework_show_page.html', {'homework_show_page': homework_show_page})
